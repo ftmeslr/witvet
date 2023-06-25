@@ -1,0 +1,194 @@
+.form-control {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 364px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &.active {
+    z-index: 1;
+    .input-container {
+      .dropdown-container {
+        display: flex !important;
+      }
+    }
+  }
+
+  .title {
+    width: 100%;
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #563746;
+    margin-bottom: 4px;
+    padding: 0 16px;
+  }
+
+  &.dropdown {
+    .input-container {
+      position: relative;
+      width: 100%;
+      .dropdown-button {
+        width: 100%;
+        background-color: #f4f3f0;
+        border-radius: 16px;
+        height: 52px;
+        line-height: 52px;
+        padding: 0 16px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 52px;
+        color: #563746;
+        display: block;
+        border: 1px solid #d6d6d3;
+        cursor: pointer;
+        padding-right: 50px;
+
+        .icon {
+          position: absolute;
+          right: 14px;
+          top: calc((100% - 24px) / 2);
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .dropdown-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: absolute;
+        top: 62px;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
+        border-radius: 16px;
+        padding: 16px;
+
+        > * {
+          margin-bottom: 16px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .textbox {
+          width: 100%;
+        }
+
+        .options {
+          width: 100%;
+          cursor: pointer;
+          max-height: 120px;
+          overflow: auto;
+          .option {
+            background: transparent;
+            border-radius: 10px;
+            line-height: 40px;
+            padding: 0 12px;
+            transition: all ease 0.3s;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: #563746;
+            margin-bottom: 4px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &.text-primary {
+              color: #563746;
+              &.active,
+              &:hover {
+                background: lighten(#563746, 40);
+              }
+            }
+
+            &.text-warning {
+              color: #ffa500;
+              &.active,
+              &:hover {
+                background: lighten(#ffa500, 40);
+              }
+            }
+
+            &.text-danger {
+              color: #ff3a44;
+              &.active,
+              &:hover {
+                background: lighten(#ff3a44, 30);
+              }
+            }
+
+            &.text-success {
+              color: #16bb83;
+              &.active,
+              &:hover {
+                background: lighten(#16bb83, 40);
+              }
+            }
+          }
+        }
+      }
+
+      .validations {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        line-height: 17px;
+        .error {
+          margin-bottom: 5px;
+          margin-top: 5px;
+          display: block;
+          font-size: 14px;
+          color: #970000;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// breakpoints
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .form-control {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .form-control {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .form-control {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+}

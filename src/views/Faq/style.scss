@@ -1,0 +1,436 @@
+.patterns {
+  position: absolute;
+  width: 100%;
+  z-index: -60;
+  .pattern_1 {
+    position: absolute;
+    right: 0;
+    top: -120px;
+  }
+  .pattern_2 {
+    position: absolute;
+    left: 0;
+    top: 1640px;
+  }
+  .foot_print {
+    position: absolute;
+    left: 135px;
+    top: 70px;
+  }
+  .foot_print-2 {
+    position: absolute;
+    left: 205px;
+    top: 535px;
+    width: 44px;
+  }
+  .foot_print-3 {
+    position: absolute;
+    left: 129px;
+    width: 111px;
+  }
+
+  .foot_print-4 {
+    position: absolute;
+    right: 100px;
+    width: 50px;
+  }
+}
+
+.flex-responsive {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.page-wrapper {
+  margin: 0 auto;
+  width: 992px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .primary-part {
+    width: 486px;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .page-title {
+      width: auto;
+      padding-bottom: 20px;
+      margin-bottom: 23px;
+      position: relative;
+
+      .title-underline {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 52px;
+        line-height: 60px;
+        color: #4aaac5;
+        width: auto;
+        display: inline-block;
+      }
+    }
+
+    .page-description {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #836473;
+      width: 100%;
+    }
+  }
+
+  .secondary-part {
+    width: 462px;
+    margin-right: 0;
+    margin-left: auto;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  .faqs-list {
+    margin-top: 24px;
+    width: 100%;
+    .faq-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .number {
+        background: #f4f3f0;
+        border-radius: 12px;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #836473;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+      }
+      .content {
+        width: calc(100% - 40px - 40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 16px;
+        padding-right: 16px;
+        .question {
+          padding-top: 9px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 25px;
+          color: #563746;
+        }
+        .answer {
+          font-style: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #836473;
+          max-height: 1px;
+          overflow: hidden;
+          opacity: 0;
+          transition: max-height 0.8s ease 0s, opacity 0.4s ease 0s;
+        }
+      }
+      .arrow-button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &.active {
+        .content {
+          .answer {
+            max-height: 1000px;
+            opacity: 1;
+            transition: max-height 0.8s ease 0s, opacity 0.4s ease 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 399px) {
+  .page-wrapper {
+    width: 310px;
+    flex-direction: column-reverse;
+    .primary-part {
+      width: 300px;
+      margin: auto;
+      .page-title .text {
+        font-size: 38px;
+      }
+      .faqs-page .item {
+        .input-box {
+          width: 300px !important;
+        }
+      }
+      .page-title {
+        margin-bottom: 5px;
+        .text {
+          font-size: 40px;
+        }
+      }
+    }
+    .secondary-part {
+      margin: auto;
+      width: 300px;
+    }
+    .faqs-list {
+      order: -1;
+      width: 300px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .patterns {
+    .pattern_1 {
+      top: -130px;
+      width: 250px;
+    }
+    .pattern_2 {
+      left: 0;
+      top: 4140px;
+      width: 300px;
+    }
+    .foot_print-3 {
+      position: absolute;
+      left: 237px;
+      top: 695px;
+      width: 60px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 479px) {
+  .page-wrapper {
+    width: 364px;
+    flex-direction: column-reverse;
+    .primary-part {
+      width: 100%;
+      margin: auto;
+      .page-title .text {
+        font-size: 40px;
+      }
+      .download-list .item {
+        width: 248px;
+      }
+    }
+    .secondary-part {
+      width: 364px;
+      margin: auto;
+      .page-title {
+        margin-top: 20px;
+      }
+    }
+    .faqs-list {
+      order: -1;
+      width: 364px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .patterns {
+    .pattern_1 {
+      top: -130px;
+      width: 250px;
+    }
+    .pattern_2 {
+      left: 0;
+      top: 4140px;
+      width: 300px;
+    }
+    .foot_print-3 {
+      position: absolute;
+      left: 237px;
+      top: 695px;
+      width: 60px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .page-wrapper {
+    width: 479px;
+    flex-direction: column-reverse;
+    .primary-part {
+      width: 430px;
+      margin: auto;
+      .faqs-page .item {
+        width: 248px;
+        .input-box {
+          width: 364px !important;
+        }
+      }
+    }
+    .secondary-part {
+      margin: auto;
+      .page-title {
+        margin-top: 20px;
+      }
+    }
+    .faqs-list {
+      order: -1;
+      width: 430px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .page-wrapper {
+    width: 599px;
+    flex-direction: column-reverse;
+    .primary-part {
+      width: 530px;
+      margin: auto;
+    }
+    .secondary-part {
+      margin: auto;
+      .page-title {
+        margin-top: 20px;
+      }
+    }
+    .faqs-list {
+      order: -1;
+      width: 530px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .page-wrapper {
+    width: 767px;
+    flex-direction: column-reverse;
+    .primary-part,
+    .secondary-part {
+      margin: auto;
+    }
+    .primary-part .page-title {
+      margin-top: 20px;
+    }
+    .faqs-list {
+      order: -1;
+      width: 486px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+  .page-wrapper {
+    width: 899px;
+    flex-direction: column-reverse;
+    .primary-part,
+    .secondary-part {
+      margin: auto;
+    }
+    .primary-part .page-title {
+      margin-top: 20px;
+    }
+    .faqs-list {
+      order: -1;
+      width: 486px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .page-wrapper {
+    flex-direction: column-reverse;
+    .primary-part,
+    .secondary-part {
+      margin: auto;
+    }
+    .primary-part .page-title {
+      margin-top: 20px;
+    }
+    .faqs-list {
+      order: -1;
+      width: 486px;
+      margin: auto;
+      margin-top: 24px;
+    }
+  }
+
+  .flex-responsive {
+    flex-direction: column;
+  }
+  .page-wrapper .faqs-list .faq-item .arrow-button {
+    width: 100%;
+  }
+}

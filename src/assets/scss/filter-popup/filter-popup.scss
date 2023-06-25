@@ -1,0 +1,160 @@
+.popup-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  transition: 0.3s opacity;
+  opacity: 0;
+  padding: 20px;
+  visibility: hidden;
+  z-index: -1;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999999;
+  }
+  .filter-popup {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6px 34px;
+    position: relative;
+    border-radius: 30px;
+    z-index: 1;
+    max-height: 600px;
+    height: 100vh;
+    height: auto;
+    margin-top: 100px;
+    
+
+    overflow-y: auto;
+    .header {
+      width: 1036px;
+      justify-content: space-between;
+      position: relative;
+      margin: auto;
+      .title {
+        margin-right: 10px;
+        > * {
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+      .button-close-popup {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 50%;
+        .icon {
+          width: 24px;
+          height: 24px;
+          overflow: hidden;
+          svg,
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            path,
+            circle,
+            line,
+            rect {
+              transition: 0.3s;
+            }
+          }
+        }
+        &:hover {
+          .icon {
+            svg {
+              path,
+              circle,
+              line,
+              rect {
+                transition: 0s;
+              }
+            }
+          }
+        }
+      }
+    }
+    .body {
+      width: 100%;
+      form {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .buttons {
+          width: 100%;
+          button {
+            margin-right: 16px;
+            border: none;
+            outline: none;
+            height: 54px;
+            width: 108px;
+            transition: 0.3s;
+            border-radius: 14px;
+            cursor: pointer;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.buttons {
+  width: 100%;
+  button {
+    margin-right: 16px;
+    border: none;
+    outline: none;
+    height: 54px;
+    width: 108px;
+    transition: 0.3s;
+    border-radius: 14px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.vue3-player-video .shadow-xl {
+  box-shadow: none !important;
+}
+
+.vue3-player-video .w-32 {
+  display: none;
+}
+.popup-wrapper .filter-popup .header .button-close-popup {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  position: absolute;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+@media screen and (max-width: 1200px) {
+  .popup-wrapper .filter-popup .header {
+    width: 90%;
+    }
+    .popup-wrapper .filter-popup{
+      margin-top: 100px;
+    }
+    .vue3-player-video .w-20{
+      width: 3rem;
+      img{
+        width:1rem
+      }
+    }
+    .vue3-player-video .h-20{
+      height: 3rem;
+    }
+  
+}

@@ -1,0 +1,89 @@
+@media screen and (max-width: 768px) {
+  .popup-remove-loan-wrapper .filter-popup {
+    padding: 0;
+    .button-close-popup {
+      top: 10px !important;
+      right: 10px !important;
+      z-index: 999999;
+    }
+  }
+}
+
+.video-js {
+  width: auto;
+  height: 480px;
+  border-radius: 24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 399px) {
+  .video-js {
+    width: 300px;
+    height: 169px;
+    margin: 0 auto;
+    border-radius: 24px;
+    .vjs-control-bar {
+      margin: 20px auto 6px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 479px) {
+  .popup-wrapper .filter-popup .header .button-close-popup {
+    right: calc((100% - 340px) / 2 + 10px) !important;
+  }
+  .video-js {
+    max-width: 340px;
+    height: 191px;
+    margin: 0 auto;
+    border-radius: 24px;
+    .vjs-control-bar {
+      margin: 20px auto 6px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .popup-wrapper .filter-popup .header .button-close-popup {
+    right: calc((100% - 400px) / 2 + 10px) !important;
+  }
+  .video-js {
+    max-width: 400px;
+    height: 225px;
+    margin: 0 auto;
+    border-radius: 24px;
+    .vjs-control-bar {
+      margin: 20px auto 6px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .popup-wrapper .filter-popup .header .button-close-popup {
+    right: calc((100% - 500px) / 2 + 10px) !important;
+  }
+  .video-js {
+    max-width: 500px;
+    height: 281px;
+    margin: 0 auto;
+    border-radius: 24px;
+    .vjs-control-bar {
+      margin: 20px auto 6px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .popup-wrapper .filter-popup .header .button-close-popup {
+    right: calc((100% - 500px) / 2 + 10px) !important;
+    top: 10px !important;
+  }
+  .video-js {
+    max-width: 500px;
+    height: 281px;
+    margin: 0 auto;
+    border-radius: 24px;
+    .vjs-control-bar {
+      margin: 20px auto 6px !important;
+    }
+  }
+}

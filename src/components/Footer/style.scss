@@ -1,0 +1,244 @@
+.footer {
+  position: relative;
+  margin: 96px auto 0 auto !important;
+  padding-bottom: 90px;
+
+  &__line {
+    background: linear-gradient(45deg, #d4c7cf00, #dedcd280, #d4c7cf00);
+    width: 100%;
+    height: 1px;
+    margin-bottom: 50px;
+  }
+  &__items {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item-one {
+    width: 40%;
+    color: #111;
+  }
+  &__item-two {
+    width: 15%;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    a {
+      margin: 0 0 16px 0;
+    }
+  }
+  &__item-three {
+    width: 20%;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+
+    a {
+      margin: 0 0 16px 0;
+    }
+  }
+  &__item-four {
+    width: 25%;
+    color: #111;
+    margin-top: 70px;
+  }
+
+  &__title {
+    font-family: "SFProDisplay_Bold", sans-serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #45283b;
+  }
+  &__sub-title {
+    font-size: 15px;
+    width: 100%;
+    line-height: 1.5;
+    color: #836473;
+  }
+  &__subtitle {
+    font-size: 15px;
+    cursor: pointer;
+    color: #836473;
+    margin-left: 6px;
+  }
+  &__title-hover {
+    width: 0;
+    height: 18px;
+    background-color: #ffbd00;
+    transform: rotate(-8deg);
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    opacity: 1;
+    z-index: -1;
+    transform-origin: bottom left;
+    transition: all 0.3s ease-in;
+  }
+}
+.get-app-button {
+  margin-right: 24px;
+  background: linear-gradient(329.84deg, #946985 9.43%, #45283b 116.39%);
+  border-radius: 20px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 40px 0 20px;
+  .icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: #946985;
+    border-radius: 24px;
+    margin-right: 14px;
+    transition: all ease 0.3s;
+  }
+  .text {
+    font-style: normal;
+    font-size: 19px;
+    line-height: 20px;
+    padding-top: 2px;
+    text-align: justify;
+    color: #febf50;
+  }
+  &:hover {
+    .icon {
+      transform: rotate(30deg);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 112px;
+  margin: auto;
+  margin-top: 24px;
+  &__item {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    color: #f2994a;
+  }
+}
+.footer__icon {
+  margin-top: 3px;
+  svg {
+    transition: all 0.3s ease;
+  }
+}
+.social__item-img {
+  margin: 0 4px;
+}
+.footer__subtitle-box {
+  position: relative;
+  margin: 22px auto 5px auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer__subtitle-box:hover {
+  .footer__title-hover {
+    width: 86px;
+  }
+  .footer__icon {
+    svg {
+      transform: rotate(-14deg);
+      scale: 1.2;
+      path {
+        fill: #45283b;
+      }
+    }
+  }
+  .footer__subtitle {
+    color: #654957;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .footer {
+    padding-top: 0;
+    margin-top: 58px;
+
+    &__item-one {
+      width: 60%;
+
+      a {
+        margin: 16px 0 !important;
+      }
+    }
+    &__item-two {
+      width: 30%;
+    }
+    &__item-three {
+      margin-top: 40px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 0;
+    }
+    &__item-four {
+      margin-top: 40px;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .container {
+    max-width: 600px;
+  }
+  .footer {
+    &__items {
+      padding-bottom: 50px;
+    }
+    &__item-one {
+      width: 100%;
+    }
+    &__item-two {
+      margin-top: 40px;
+
+      width: 100%;
+    }
+    &__item-three {
+      margin-top: 40px;
+      width: 100%;
+    }
+    &__item-four {
+      margin-top: 40px;
+      width: 212px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footprint--5 {
+      left: 190px;
+      bottom: 210px;
+    }
+  }
+}
